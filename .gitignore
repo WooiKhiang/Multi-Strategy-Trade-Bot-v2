@@ -23,7 +23,7 @@ env/
 # =========================
 # Data / Runtime
 # =========================
-data/
+/data/
 !data/.gitkeep
 *.db
 *.sqlite
