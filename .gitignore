@@ -1,0 +1,56 @@
+# =========================
+# Secrets / Environment
+# =========================
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.p12
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+
+# =========================
+# Data / Runtime
+# =========================
+data/
+!data/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.lock
+
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Test / Coverage
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# Build
+# =========================
+dist/
+build/
+*.egg-info/
