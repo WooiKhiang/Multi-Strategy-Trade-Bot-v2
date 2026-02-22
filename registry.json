@@ -1,0 +1,46 @@
+{
+    "data": {
+        "fetcher": "core/data/fetcher.py",
+        "validator": "core/data/validator.py",
+        "cache": "core/data/cache.py",
+        "session": "core/data/session.py"
+    },
+    "strategies": {
+        "rsi_meanrev": "core/strategies/rsi_meanrev.py",
+        "momentum": "core/strategies/momentum.py",
+        "hybrid": "core/strategies/hybrid.py"
+    },
+    "signal": {
+        "processor": "core/signal/processor.py",
+        "confidence": "core/signal/confidence.py",
+        "cooldown": "core/signal/cooldown.py"
+    },
+    "risk": {
+        "manager": "core/risk/manager.py",
+        "sizer": "core/risk/sizer.py",
+        "limits": "core/risk/limits.py",
+        "ignore": "core/risk/ignore.py"
+    },
+    "execution": {
+        "executor": "core/execution/executor.py",
+        "monitor": "core/execution/monitor.py",
+        "reconciler": "core/execution/reconciler.py",
+        "slippage": "core/execution/slippage.py"
+    },
+    "market": {
+        "regime": "core/market/regime.py",
+        "sentinel": "core/market/sentinel.py",
+        "breadth": "core/market/breadth.py"
+    },
+    "health": {
+        "state": "core/health/state.py",
+        "budget": "core/health/budget.py",
+        "metrics": "core/health/metrics.py"
+    },
+    "utils": {
+        "time_utils": "core/utils/time_utils.py",
+        "indicators": "core/utils/indicators.py",
+        "logger": "core/utils/logger.py",
+        "lock": "core/utils/lock.py"
+    }
+}
