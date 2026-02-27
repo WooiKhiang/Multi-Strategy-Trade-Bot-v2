@@ -1,0 +1,25 @@
+# .github/workflows/daily_maintenance.yml
+name: Daily Maintenance
+
+on:
+  schedule:
+    - cron: '30 20 * * 1-5'  # 4:30 PM UTC daily
+  workflow_dispatch:
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run watch list builder
+        run: python scripts/build_watch_list.py
+      - name: Run master universe (if Sunday)
+        if: github.event.schedule == '0 2 * * 0'
+        run: python scripts/build_master_universe.py
+      - name: Commit updates
+        run: |
+          git config user.name 'GitHub Actions'
+          git config user.email 'actions@github.com'
+          git add data/
+          git commit -m "Daily maintenance [skip ci]" || exit 0
+          git push
